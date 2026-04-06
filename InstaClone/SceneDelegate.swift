@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  InstaClone
-//
-//  Created by Георгий Полежаев on 06.04.2026.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
