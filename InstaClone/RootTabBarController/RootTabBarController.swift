@@ -24,10 +24,11 @@ class RootViewController: UITabBarController {
         firstNav.tabBarItem.image = UIImage(systemName: "house")
         secondNav.tabBarItem.image = UIImage(systemName: "film")
         thirdNav.tabBarItem.image = UIImage(systemName: "paperplane")
-        fourthNav.tabBarItem.image = UIImage(systemName: "magnifyingglass")
+        fourthNav.tabBarItem.image = UIImage(named: "search (1)")
         fifthNav.tabBarItem.image = UIImage(systemName: "person.circle")
         
         self.viewControllers = [firstNav, secondNav, thirdNav, fourthNav, fifthNav]
     }
     
 }
+//magnifyingglass

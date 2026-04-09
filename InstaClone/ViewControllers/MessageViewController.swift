@@ -1,23 +1,21 @@
 import UIKit
 
-class MessageViewController: UIViewController {
+class MessageViewController: NavBarViewController, NavBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let label = UILabel()
-        label.text = "Message"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        label.textAlignment = .center
+        myDelegate = self
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label)
-        
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        configureNavBar(NavBarConfig(title: "Message", leftImage: UIImage(systemName: "person.circle"), rightImage: UIImage(systemName: "house"), centerImage: nil))
     }
 
-
+    func didTapLeftButton() {
+        print("Left tapped with delegate on Message!")
+    }
+    
+    func didTapRightButton() {
+        print("Right tapped with delegate on Message!")
+    }
 }
 

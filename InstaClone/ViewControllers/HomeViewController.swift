@@ -1,23 +1,21 @@
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: NavBarViewController, NavBarDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let label = UILabel()
-        label.text = "Home"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        label.textAlignment = .center
+        myDelegate = self
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label)
+        configureNavBar(NavBarConfig(title: "home", leftImage: UIImage(systemName: "house"), rightImage: UIImage(systemName: "film"), centerImage: nil))
         
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 
-
+    func didTapLeftButton() {
+        print("Left tapped with delegate!")
+    }
+    
+    func didTapRightButton() {
+        print("Right tapped with delegate!")
+    }
 }
-
